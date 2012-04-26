@@ -1,0 +1,5 @@
+<h1>New note <% if !@noteable.nil? %> for <%= @noteable.class.name %> (ID: <%= @noteable.id %>) <% end %></h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', notes_path %>

@@ -1,0 +1,27 @@
+<h1>Listing notes <% if !@noteable.nil? %> for <%= @noteable.class.name %> (ID: <%= @noteable.id %>) <% end %></h1>
+
+<table>
+  <tr>
+    <th>Created At</th>
+    <th>Body</th>
+    <th>Author</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @notes.each do |note| %>
+  <tr>
+    <td><%= note.created_at %></td>
+    <td><%= note.body %></td>
+    <td><%= note.author %></td>
+    <td><%= link_to 'Show', note %></td>
+    <td><%= link_to 'Edit', edit_note_path(note) %></td>
+    <td><%= link_to 'Destroy', note, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Note', new_note_path %>

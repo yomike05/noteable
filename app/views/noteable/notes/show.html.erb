@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+Item ID: <%= @note.item_id %><br/>
+Item Type: <%= @note.item_type %><br/>
+Author: <%= @note.author %><br/>
+Body: <%= @note.body %><br/><br/>
+
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>
