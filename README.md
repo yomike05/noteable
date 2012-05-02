@@ -38,10 +38,10 @@ note.author # author's name
 note.created_at # creation timestamp
 ```
 
-  Create a note as normal:
+  Create a note:
 
 ```ruby
-@myproduct = MyProduct.find 17
+@myproduct = Product.find 17
 @myproduct.notes.create :body => "I've seen everything.", :author => "Ned"
 ```
 
